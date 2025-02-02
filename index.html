@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Index Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Quintessential&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="about" id="about" onclick="openAboutPopup(event)">
+    <p>About</p>
+    </div>
+
+    <div class="about-popup" id="aboutPopup">
+        <div class="about-content">
+            <span class="close-btn" onclick="closeAboutPopup()">&times; Close</span>
+            <h2>About This Project</h2>
+            <p>
+                Created as part of Assignment 3 for <strong>DCX101 - Design Context</strong> by Bille Blue @ Torrens University Australia.<br><br>
+
+                With this project, I aim to bring the design language and revolutionary spirit of the French Revolution into the present, filtered through the lens of UX and web design. My goal is to create an interactive tool that visually represents global freedom scores in a meaningful way. If it sparks even the smallest thought, conversation, or action, I’ll consider it a success.<br><br>
+
+                <strong>Knowledge is power.</strong> This project is designed to be an engaging way to explore global freedom data while also providing access to local and international resources for those who seek change.<br><br>
+
+                <strong>Data Source:</strong><br>
+                The data in this project is sourced from <a href="https://freedomhouse.org/countries/freedom-world/scores/">Freedom House</a>:<br>
+                <em>“Freedom House rates people’s access to political rights and civil liberties in 210 countries and territories through its annual Freedom in the World report. Individual freedoms—ranging from the right to vote to freedom of expression and equality before the law—can be affected by state or non-state actors.”</em><br><br>
+
+                <strong>Important Note:</strong><br>
+                This dataset was captured in <strong>January 2025</strong> and is intended for project display purposes only. It does not represent real-time data. This also applies to the global and local resources listed.
+            </p>
+
+            <h3>Credits</h3>
+            <p>
+                <a href="https://freedomhouse.org/countries/freedom-world/scores/">Freedom House</a><br>
+                <a href="https://www.flaticon.com/free-icons/">Base flag graphics created by Flaticon</a><br>
+                <a href="https://www.freepik.com/">Textures provided by Freepik</a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container" id="flagContainer">
+        <div class="line-drawing"></div>
+            <img id="Abkhazia" src="back-flags/Abkhazia.png" class="flag">
+            <img id="Afghanistan" src="back-flags/Afghanistan.png" class="flag">
+            <img id="Albania" src="back-flags/Albania.png" class="flag">
+            <img id="Algeria" src="back-flags/Algeria.png" class="flag">
+            <img id="Andorra" src="back-flags/Andorra.png" class="flag">
+            <img id="Angola" src="back-flags/Angola.png" class="flag">
+            <img id="Antigua and Barbuda" src="back-flags/Antigua and Barbuda.png" class="flag">
+            <img id="Argentina" src="back-flags/Argentina.png" class="flag">
+            <img id="Armenia" src="back-flags/Armenia.png" class="flag">
+            <img id="Australia" src="back-flags/Australia.png" class="flag">
+            <img id="Austria" src="back-flags/Austria.png" class="flag">
+            <img id="Azerbaijan" src="back-flags/Azerbaijan.png" class="flag">
+            <img id="Bahamas" src="back-flags/Bahamas.png" class="flag">
+            <img id="Bahrain" src="back-flags/Bahrain.png" class="flag">
+            <img id="Bangladesh" src="back-flags/Bangladesh.png" class="flag">
+            <img id="Barbados" src="back-flags/Barbados.png" class="flag">
+            <img id="Belarus" src="back-flags/Belarus.png" class="flag">
+            <img id="Belgium" src="back-flags/Belgium.png" class="flag">
+            <img id="Belize" src="back-flags/Belize.png" class="flag">
+            <img id="Benin" src="back-flags/Benin.png" class="flag">
+            <img id="Bhutan" src="back-flags/Bhutan.png" class="flag">
+            <img id="Bolivia" src="back-flags/Bolivia.png" class="flag">
+            <img id="Bosnia and Herzegovina" src="back-flags/Bosnia and Herzegovina.png" class="flag">
+            <img id="Botswana" src="back-flags/Botswana.png" class="flag">
+            <img id="Brazil" src="back-flags/Brazil.png" class="flag">
+            <img id="Brunei" src="back-flags/Brunei.png" class="flag">
+            <img id="Bulgaria" src="back-flags/Bulgaria.png" class="flag">
+            <img id="Burkina Faso" src="back-flags/Burkina Faso.png" class="flag">
+            <img id="Burundi" src="back-flags/Burundi.png" class="flag">
+            <img id="Cabo Verde" src="back-flags/Cabo Verde.png" class="flag">
+            <img id="Cambodia" src="back-flags/Cambodia.png" class="flag">
+            <img id="Cameroon" src="back-flags/Cameroon.png" class="flag">
+            <img id="Canada" src="back-flags/Canada.png" class="flag">
+            <img id="Central African Republic" src="back-flags/Central African Republic.png" class="flag">
+            <img id="Chad" src="back-flags/Chad.png" class="flag">
+            <img id="Chile" src="back-flags/Chile.png" class="flag">
+            <img id="China" src="back-flags/China.png" class="flag">
+            <img id="Colombia" src="back-flags/Colombia.png" class="flag">
+            <img id="Comoros" src="back-flags/Comoros.png" class="flag">
+            <img id="Costa Rica" src="back-flags/Costa Rica.png" class="flag">
+            <img id="Croatia" src="back-flags/Croatia.png" class="flag">
+            <img id="Cuba" src="back-flags/Cuba.png" class="flag">
+            <img id="Cyprus" src="back-flags/Cyprus.png" class="flag">
+            <img id="Czechia" src="back-flags/Czechia.png" class="flag">
+            <img id="Democratic Republic of the Congo" src="back-flags/Democratic Republic of the Congo.png" class="flag">
+            <img id="Denmark" src="back-flags/Denmark.png" class="flag">
+            <img id="Djibouti" src="back-flags/Djibouti.png" class="flag">
+            <img id="Dominica" src="back-flags/Dominica.png" class="flag">
+            <img id="Dominican Republic" src="back-flags/Dominican Republic.png" class="flag">
+            <img id="Ecuador" src="back-flags/Ecuador.png" class="flag">
+            <img id="Egypt" src="back-flags/Egypt.png" class="flag">
+            <img id="El Salvador" src="back-flags/El Salvador.png" class="flag">
+            <img id="Equatorial Guinea" src="back-flags/Equatorial Guinea.png" class="flag">
+            <img id="Eritrea" src="back-flags/Eritrea.png" class="flag">
+            <img id="Estonia" src="back-flags/Estonia.png" class="flag">
+            <img id="Eswatini" src="back-flags/Eswatini.png" class="flag">
+            <img id="Ethiopia" src="back-flags/Ethiopia.png" class="flag">
+            <img id="Finland" src="back-flags/Finland.png" class="flag">
+            <img id="France" src="back-flags/France.png" class="flag">
+            <img id="Gabon" src="back-flags/Gabon.png" class="flag">
+            <img id="The Gambia" src="back-flags/The Gambia.png" class="flag">
+            <img id="Georgia" src="back-flags/Georgia.png" class="flag">
+            <img id="Germany" src="back-flags/Germany.png" class="flag">
+            <img id="Ghana" src="back-flags/Ghana.png" class="flag">
+            <img id="Greece" src="back-flags/Greece.png" class="flag">
+            <img id="Grenada" src="back-flags/Grenada.png" class="flag">
+            <img id="Guatemala" src="back-flags/Guatemala.png" class="flag">
+            <img id="Guinea" src="back-flags/Guinea.png" class="flag">
+            <img id="Guinea-Bissau" src="back-flags/Guinea-Bissau.png" class="flag">
+            <img id="Guyana" src="back-flags/Guyana.png" class="flag">
+            <img id="Haiti" src="back-flags/Haiti.png" class="flag">
+            <img id="Honduras" src="back-flags/Honduras.png" class="flag">
+            <img id="Hong Kong" src="back-flags/Hong Kong.png" class="flag">
+            <img id="Hungary" src="back-flags/Hungary.png" class="flag">
+            <img id="Iceland" src="back-flags/Iceland.png" class="flag">
+            <img id="India" src="back-flags/India.png" class="flag">
+            <img id="Indonesia" src="back-flags/Indonesia.png" class="flag">
+            <img id="Iran" src="back-flags/Iran.png" class="flag">
+            <img id="Iraq" src="back-flags/Iraq.png" class="flag">
+            <img id="Ireland" src="back-flags/Ireland.png" class="flag">
+            <img id="Israel" src="back-flags/Israel.png" class="flag">
+            <img id="Italy" src="back-flags/Italy.png" class="flag">
+            <img id="Jamaica" src="back-flags/Jamaica.png" class="flag">
+            <img id="Japan" src="back-flags/Japan.png" class="flag">
+            <img id="Jordan" src="back-flags/Jordan.png" class="flag">
+            <img id="Kazakhstan" src="back-flags/Kazakhstan.png" class="flag">
+            <img id="Kenya" src="back-flags/Kenya.png" class="flag">
+            <img id="Kiribati" src="back-flags/Kiribati.png" class="flag">
+            <img id="Kosovo" src="back-flags/Kosovo.png" class="flag">
+            <img id="Kuwait" src="back-flags/Kuwait.png" class="flag">
+            <img id="Kyrgyzstan" src="back-flags/Kyrgyzstan.png" class="flag">
+            <img id="Laos" src="back-flags/Laos.png" class="flag">
+            <img id="Latvia" src="back-flags/Latvia.png" class="flag">
+            <img id="Lebanon" src="back-flags/Lebanon.png" class="flag">
+            <img id="Lesotho" src="back-flags/Lesotho.png" class="flag">
+            <img id="Liberia" src="back-flags/Liberia.png" class="flag">
+            <img id="Libya" src="back-flags/Libya.png" class="flag">
+            <img id="Liechtenstein" src="back-flags/Liechtenstein.png" class="flag">
+            <img id="Lithuania" src="back-flags/Lithuania.png" class="flag">
+            <img id="Luxembourg" src="back-flags/Luxembourg.png" class="flag">
+            <img id="Madagascar" src="back-flags/Madagascar.png" class="flag">
+            <img id="Malawi" src="back-flags/Malawi.png" class="flag">
+            <img id="Malaysia" src="back-flags/Malaysia.png" class="flag">
+            <img id="Maldives" src="back-flags/Maldives.png" class="flag">
+            <img id="Mali" src="back-flags/Mali.png" class="flag">
+            <img id="Malta" src="back-flags/Malta.png" class="flag">
+            <img id="Marshall Islands" src="back-flags/Marshall Islands.png" class="flag">
+            <img id="Mauritania" src="back-flags/Mauritania.png" class="flag">
+            <img id="Mauritius" src="back-flags/Mauritius.png" class="flag">
+            <img id="Mexico" src="back-flags/Mexico.png" class="flag">
+            <img id="Micronesia" src="back-flags/Micronesia.png" class="flag">
+            <img id="Moldova" src="back-flags/Moldova.png" class="flag">
+            <img id="Monaco" src="back-flags/Monaco.png" class="flag">
+            <img id="Mongolia" src="back-flags/Mongolia.png" class="flag">
+            <img id="Montenegro" src="back-flags/Montenegro.png" class="flag">
+            <img id="Morocco" src="back-flags/Morocco.png" class="flag">
+            <img id="Mozambique" src="back-flags/Mozambique.png" class="flag">
+            <img id="Myanmar" src="back-flags/Myanmar.png" class="flag">
+            <img id="Namibia" src="back-flags/Namibia.png" class="flag">
+            <img id="Nauru" src="back-flags/Nauru.png" class="flag">
+            <img id="Nepal" src="back-flags/Nepal.png" class="flag">
+            <img id="Netherlands" src="back-flags/Netherlands.png" class="flag">
+            <img id="New Zealand" src="back-flags/New Zealand.png" class="flag">
+            <img id="Nicaragua" src="back-flags/Nicaragua.png" class="flag">
+            <img id="Niger" src="back-flags/Niger.png" class="flag">
+            <img id="Nigeria" src="back-flags/Nigeria.png" class="flag">
+            <img id="North Korea" src="back-flags/North Korea.png" class="flag">
+            <img id="North Macedonia" src="back-flags/North Macedonia.png" class="flag">
+            <img id="Norway" src="back-flags/Norway.png" class="flag">
+            <img id="Oman" src="back-flags/Oman.png" class="flag">
+            <img id="Pakistan" src="back-flags/Pakistan.png" class="flag">
+            <img id="Palau" src="back-flags/Palau.png" class="flag">
+            <img id="Palestine" src="back-flags/Palestine.png" class="flag">
+            <img id="Panama" src="back-flags/Panama.png" class="flag">
+            <img id="Papua New Guinea" src="back-flags/Papua New Guinea.png" class="flag">
+            <img id="Paraguay" src="back-flags/Paraguay.png" class="flag">
+            <img id="Peru" src="back-flags/Peru.png" class="flag">
+            <img id="Philippines" src="back-flags/Philippines.png" class="flag">
+            <img id="Poland" src="back-flags/Poland.png" class="flag">
+            <img id="Portugal" src="back-flags/Portugal.png" class="flag">
+            <img id="Qatar" src="back-flags/Qatar.png" class="flag">
+            <img id="Romania" src="back-flags/Romania.png" class="flag">
+            <img id="Russia" src="back-flags/Russia.png" class="flag">
+            <img id="Rwanda" src="back-flags/Rwanda.png" class="flag">
+            <img id="Saint Kitts and Nevis" src="back-flags/Saint Kitts and Nevis.png" class="flag">
+            <img id="Saint Lucia" src="back-flags/Saint Lucia.png" class="flag">
+            <img id="Saint Vincent and the Grenadines" src="back-flags/Saint Vincent and the Grenadines.png" class="flag">
+            <img id="Samoa" src="back-flags/Samoa.png" class="flag">
+            <img id="San Marino" src="back-flags/San Marino.png" class="flag">
+            <img id="Saudi Arabia" src="back-flags/Saudi Arabia.png" class="flag">
+            <img id="Senegal" src="back-flags/Senegal.png" class="flag">
+            <img id="Serbia" src="back-flags/Serbia.png" class="flag">
+            <img id="Seychelles" src="back-flags/Seychelles.png" class="flag">
+            <img id="Sierra Leone" src="back-flags/Sierra Leone.png" class="flag">
+            <img id="Singapore" src="back-flags/Singapore.png" class="flag">
+            <img id="Slovakia" src="back-flags/Slovakia.png" class="flag">
+            <img id="Slovenia" src="back-flags/Slovenia.png" class="flag">
+            <img id="Solomon Islands" src="back-flags/Solomon Islands.png" class="flag">
+            <img id="Somalia" src="back-flags/Somalia.png" class="flag">
+            <img id="South Africa" src="back-flags/South Africa.png" class="flag">
+            <img id="South Korea" src="back-flags/South Korea.png" class="flag">
+            <img id="South Sudan" src="back-flags/South Sudan.png" class="flag">
+            <img id="Spain" src="back-flags/Spain.png" class="flag">
+            <img id="Sri Lanka" src="back-flags/Sri Lanka.png" class="flag">
+            <img id="Sudan" src="back-flags/Sudan.png" class="flag">
+            <img id="Suriname" src="back-flags/Suriname.png" class="flag">
+            <img id="Sweden" src="back-flags/Sweden.png" class="flag">
+            <img id="Switzerland" src="back-flags/Switzerland.png" class="flag">
+            <img id="Syria" src="back-flags/Syria.png" class="flag">
+            <img id="Taiwan" src="back-flags/Taiwan.png" class="flag">
+            <img id="Tajikistan" src="back-flags/Tajikistan.png" class="flag">
+            <img id="Tanzania" src="back-flags/Tanzania.png" class="flag">
+            <img id="Thailand" src="back-flags/Thailand.png" class="flag">
+            <img id="Timor-Leste" src="back-flags/Timor-Leste.png" class="flag">
+            <img id="Togo" src="back-flags/Togo.png" class="flag">
+            <img id="Tonga" src="back-flags/Tonga.png" class="flag">
+            <img id="Trinidad and Tobago" src="back-flags/Trinidad and Tobago.png" class="flag">
+            <img id="Tunisia" src="back-flags/Tunisia.png" class="flag">
+            <img id="Turkey" src="back-flags/Turkey.png" class="flag">
+            <img id="Turkmenistan" src="back-flags/Turkmenistan.png" class="flag">
+            <img id="Tuvalu" src="back-flags/Tuvalu.png" class="flag">
+            <img id="Uganda" src="back-flags/Uganda.png" class="flag">
+            <img id="Ukraine" src="back-flags/Ukraine.png" class="flag">
+            <img id="United Arab Emirates" src="back-flags/United Arab Emirates.png" class="flag">
+            <img id="United Kingdom" src="back-flags/United Kingdom.png" class="flag">
+            <img id="United States" src="back-flags/United States.png" class="flag">
+            <img id="Uruguay" src="back-flags/Uruguay.png" class="flag">
+            <img id="Uzbekistan" src="back-flags/Uzbekistan.png" class="flag">
+            <img id="Vanuatu" src="back-flags/Vanuatu.png" class="flag">
+            <img id="Vatican City" src="back-flags/Vatican City.png" class="flag">
+            <img id="Venezuela" src="back-flags/Venezuela.png" class="flag">
+            <img id="Vietnam" src="back-flags/Vietnam.png" class="flag">
+            <img id="Western Sahara" src="back-flags/Western Sahara.png" class="flag">
+            <img id="Yemen" src="back-flags/Yemen.png" class="flag">
+            <img id="Zambia" src="back-flags/Zambia.png" class="flag">
+            <img id="Zimbabwe" src="back-flags/Zimbabwe.png" class="flag">
+
+    <div class="popup" id="popup">
+        <span class="close-btn" onclick="closePopup()">&times; Close</span>
+
+         <!-- 🔍 Search Bar -->
+        <input type="text" id="searchInput" placeholder="Search for a country..." class="search-bar">
+
+            <div class="popup-content">
+                <a href="#" onclick="changeFlag('Abkhazia')">Abkhazia</a>
+                <a href="#" onclick="changeFlag('Afghanistan')">Afghanistan</a>
+                <a href="#" onclick="changeFlag('Albania')">Albania</a>
+                <a href="#" onclick="changeFlag('Algeria')">Algeria</a>
+                <a href="#" onclick="changeFlag('Andorra')">Andorra</a>
+                <a href="#" onclick="changeFlag('Angola')">Angola</a>
+                <a href="#" onclick="changeFlag('Antigua and Barbuda')">Antigua and Barbuda</a>
+                <a href="#" onclick="changeFlag('Argentina')">Argentina</a>
+                <a href="#" onclick="changeFlag('Armenia')">Armenia</a>
+                <a href="#" onclick="changeFlag('Australia')">Australia</a>
+                <a href="#" onclick="changeFlag('Austria')">Austria</a>
+                <a href="#" onclick="changeFlag('Azerbaijan')">Azerbaijan</a>
+                <a href="#" onclick="changeFlag('Bahamas')">Bahamas</a>
+                <a href="#" onclick="changeFlag('Bahrain')">Bahrain</a>
+                <a href="#" onclick="changeFlag('Bangladesh')">Bangladesh</a>
+                <a href="#" onclick="changeFlag('Barbados')">Barbados</a>
+                <a href="#" onclick="changeFlag('Belarus')">Belarus</a>
+                <a href="#" onclick="changeFlag('Belgium')">Belgium</a>
+                <a href="#" onclick="changeFlag('Belize')">Belize</a>
+                <a href="#" onclick="changeFlag('Benin')">Benin</a>
+                <a href="#" onclick="changeFlag('Bhutan')">Bhutan</a>
+                <a href="#" onclick="changeFlag('Bolivia')">Bolivia</a>
+                <a href="#" onclick="changeFlag('Bosnia and Herzegovina')">Bosnia and Herzegovina</a>
+                <a href="#" onclick="changeFlag('Botswana')">Botswana</a>
+                <a href="#" onclick="changeFlag('Brazil')">Brazil</a>
+                <a href="#" onclick="changeFlag('Brunei')">Brunei</a>
+                <a href="#" onclick="changeFlag('Bulgaria')">Bulgaria</a>
+                <a href="#" onclick="changeFlag('Burkina Faso')">Burkina Faso</a>
+                <a href="#" onclick="changeFlag('Burundi')">Burundi</a>
+                <a href="#" onclick="changeFlag('Cabo Verde')">Cabo Verde</a>
+                <a href="#" onclick="changeFlag('Cambodia')">Cambodia</a>
+                <a href="#" onclick="changeFlag('Cameroon')">Cameroon</a>
+                <a href="#" onclick="changeFlag('Canada')">Canada</a>
+                <a href="#" onclick="changeFlag('Central African Republic')">Central African Republic</a>
+                <a href="#" onclick="changeFlag('Chad')">Chad</a>
+                <a href="#" onclick="changeFlag('Chile')">Chile</a>
+                <a href="#" onclick="changeFlag('China')">China</a>
+                <a href="#" onclick="changeFlag('Colombia')">Colombia</a>
+                <a href="#" onclick="changeFlag('Comoros')">Comoros</a>
+                <a href="#" onclick="changeFlag('Costa Rica')">Costa Rica</a>
+                <a href="#" onclick="changeFlag('Croatia')">Croatia</a>
+                <a href="#" onclick="changeFlag('Cuba')">Cuba</a>
+                <a href="#" onclick="changeFlag('Cyprus')">Cyprus</a>
+                <a href="#" onclick="changeFlag('Czechia')">Czechia</a>
+                <a href="#" onclick="changeFlag('Democratic Republic of the Congo')">Democratic Republic of the Congo</a>
+                <a href="#" onclick="changeFlag('Denmark')">Denmark</a>
+                <a href="#" onclick="changeFlag('Djibouti')">Djibouti</a>
+                <a href="#" onclick="changeFlag('Dominica')">Dominica</a>
+                <a href="#" onclick="changeFlag('Dominican Republic')">Dominican Republic</a>
+                <a href="#" onclick="changeFlag('Ecuador')">Ecuador</a>
+                <a href="#" onclick="changeFlag('Egypt')">Egypt</a>
+                <a href="#" onclick="changeFlag('El Salvador')">El Salvador</a>
+                <a href="#" onclick="changeFlag('Equatorial Guinea')">Equatorial Guinea</a>
+                <a href="#" onclick="changeFlag('Eritrea')">Eritrea</a>
+                <a href="#" onclick="changeFlag('Estonia')">Estonia</a>
+                <a href="#" onclick="changeFlag('Eswatini')">Eswatini</a>
+                <a href="#" onclick="changeFlag('Ethiopia')">Ethiopia</a>
+                <a href="#" onclick="changeFlag('Finland')">Finland</a>
+                <a href="#" onclick="changeFlag('France')">France</a>
+                <a href="#" onclick="changeFlag('Gabon')">Gabon</a>
+                <a href="#" onclick="changeFlag('The Gambia')">The Gambia</a>
+                <a href="#" onclick="changeFlag('Georgia')">Georgia</a>
+                <a href="#" onclick="changeFlag('Germany')">Germany</a>
+                <a href="#" onclick="changeFlag('Ghana')">Ghana</a>
+                <a href="#" onclick="changeFlag('Greece')">Greece</a>
+                <a href="#" onclick="changeFlag('Grenada')">Grenada</a>
+                <a href="#" onclick="changeFlag('Guatemala')">Guatemala</a>
+                <a href="#" onclick="changeFlag('Guinea')">Guinea</a>
+                <a href="#" onclick="changeFlag('Guinea-Bissau')">Guinea-Bissau</a>
+                <a href="#" onclick="changeFlag('Guyana')">Guyana</a>
+                <a href="#" onclick="changeFlag('Haiti')">Haiti</a>
+                <a href="#" onclick="changeFlag('Honduras')">Honduras</a>
+                <a href="#" onclick="changeFlag('Hong Kong')">Hong Kong</a>
+                <a href="#" onclick="changeFlag('Hungary')">Hungary</a>
+                <a href="#" onclick="changeFlag('Iceland')">Iceland</a>
+                <a href="#" onclick="changeFlag('India')">India</a>
+                <a href="#" onclick="changeFlag('Indonesia')">Indonesia</a>
+                <a href="#" onclick="changeFlag('Iran')">Iran</a>
+                <a href="#" onclick="changeFlag('Iraq')">Iraq</a>
+                <a href="#" onclick="changeFlag('Ireland')">Ireland</a>
+                <a href="#" onclick="changeFlag('Israel')">Israel</a>
+                <a href="#" onclick="changeFlag('Italy')">Italy</a>
+                <a href="#" onclick="changeFlag('Jamaica')">Jamaica</a>
+                <a href="#" onclick="changeFlag('Japan')">Japan</a>
+                <a href="#" onclick="changeFlag('Jordan')">Jordan</a>
+                <a href="#" onclick="changeFlag('Kazakhstan')">Kazakhstan</a>
+                <a href="#" onclick="changeFlag('Kenya')">Kenya</a>
+                <a href="#" onclick="changeFlag('Kiribati')">Kiribati</a>
+                <a href="#" onclick="changeFlag('Kosovo')">Kosovo</a>
+                <a href="#" onclick="changeFlag('Kuwait')">Kuwait</a>
+                <a href="#" onclick="changeFlag('Kyrgyzstan')">Kyrgyzstan</a>
+                <a href="#" onclick="changeFlag('Laos')">Laos</a>
+                <a href="#" onclick="changeFlag('Latvia')">Latvia</a>
+                <a href="#" onclick="changeFlag('Lebanon')">Lebanon</a>
+                <a href="#" onclick="changeFlag('Lesotho')">Lesotho</a>
+                <a href="#" onclick="changeFlag('Liberia')">Liberia</a>
+                <a href="#" onclick="changeFlag('Libya')">Libya</a>
+                <a href="#" onclick="changeFlag('Liechtenstein')">Liechtenstein</a>
+                <a href="#" onclick="changeFlag('Lithuania')">Lithuania</a>
+                <a href="#" onclick="changeFlag('Luxembourg')">Luxembourg</a>
+                <a href="#" onclick="changeFlag('Madagascar')">Madagascar</a>
+                <a href="#" onclick="changeFlag('Malawi')">Malawi</a>
+                <a href="#" onclick="changeFlag('Malaysia')">Malaysia</a>
+                <a href="#" onclick="changeFlag('Maldives')">Maldives</a>
+                <a href="#" onclick="changeFlag('Mali')">Mali</a>
+                <a href="#" onclick="changeFlag('Malta')">Malta</a>
+                <a href="#" onclick="changeFlag('Marshall Islands')">Marshall Islands</a>
+                <a href="#" onclick="changeFlag('Mauritania')">Mauritania</a>
+                <a href="#" onclick="changeFlag('Mauritius')">Mauritius</a>
+                <a href="#" onclick="changeFlag('Mexico')">Mexico</a>
+                <a href="#" onclick="changeFlag('Micronesia')">Micronesia</a>
+                <a href="#" onclick="changeFlag('Moldova')">Moldova</a>
+                <a href="#" onclick="changeFlag('Monaco')">Monaco</a>
+                <a href="#" onclick="changeFlag('Mongolia')">Mongolia</a>
+                <a href="#" onclick="changeFlag('Montenegro')">Montenegro</a>
+                <a href="#" onclick="changeFlag('Morocco')">Morocco</a>
+                <a href="#" onclick="changeFlag('Mozambique')">Mozambique</a>
+                <a href="#" onclick="changeFlag('Myanmar')">Myanmar</a>
+                <a href="#" onclick="changeFlag('Namibia')">Namibia</a>
+                <a href="#" onclick="changeFlag('Nauru')">Nauru</a>
+                <a href="#" onclick="changeFlag('Nepal')">Nepal</a>
+                <a href="#" onclick="changeFlag('Netherlands')">Netherlands</a>
+                <a href="#" onclick="changeFlag('New Zealand')">New Zealand</a>
+                <a href="#" onclick="changeFlag('Nicaragua')">Nicaragua</a>
+                <a href="#" onclick="changeFlag('Niger')">Niger</a>
+                <a href="#" onclick="changeFlag('Nigeria')">Nigeria</a>
+                <a href="#" onclick="changeFlag('North Korea')">North Korea</a>
+                <a href="#" onclick="changeFlag('North Macedonia')">North Macedonia</a>
+                <a href="#" onclick="changeFlag('Norway')">Norway</a>
+                <a href="#" onclick="changeFlag('Oman')">Oman</a>
+                <a href="#" onclick="changeFlag('Pakistan')">Pakistan</a>
+                <a href="#" onclick="changeFlag('Palau')">Palau</a>
+                <a href="#" onclick="changeFlag('Palestine')">Palestine</a>
+                <a href="#" onclick="changeFlag('Panama')">Panama</a>
+                <a href="#" onclick="changeFlag('Papua New Guinea')">Papua New Guinea</a>
+                <a href="#" onclick="changeFlag('Paraguay')">Paraguay</a>
+                <a href="#" onclick="changeFlag('Peru')">Peru</a>
+                <a href="#" onclick="changeFlag('Philippines')">Philippines</a>
+                <a href="#" onclick="changeFlag('Poland')">Poland</a>
+                <a href="#" onclick="changeFlag('Portugal')">Portugal</a>
+                <a href="#" onclick="changeFlag('Qatar')">Qatar</a>
+                <a href="#" onclick="changeFlag('Romania')">Romania</a>
+                <a href="#" onclick="changeFlag('Russia')">Russia</a>
+                <a href="#" onclick="changeFlag('Rwanda')">Rwanda</a>
+                <a href="#" onclick="changeFlag('Saint Kitts and Nevis')">Saint Kitts and Nevis</a>
+                <a href="#" onclick="changeFlag('Saint Lucia')">Saint Lucia</a>
+                <a href="#" onclick="changeFlag('Saint Vincent and the Grenadines')">Saint Vincent and the Grenadines</a>
+                <a href="#" onclick="changeFlag('Samoa')">Samoa</a>
+                <a href="#" onclick="changeFlag('San Marino')">San Marino</a>
+                <a href="#" onclick="changeFlag('Saudi Arabia')">Saudi Arabia</a>
+                <a href="#" onclick="changeFlag('Senegal')">Senegal</a>
+                <a href="#" onclick="changeFlag('Serbia')">Serbia</a>
+                <a href="#" onclick="changeFlag('Seychelles')">Seychelles</a>
+                <a href="#" onclick="changeFlag('Sierra Leone')">Sierra Leone</a>
+                <a href="#" onclick="changeFlag('Singapore')">Singapore</a>
+                <a href="#" onclick="changeFlag('Slovakia')">Slovakia</a>
+                <a href="#" onclick="changeFlag('Slovenia')">Slovenia</a>
+                <a href="#" onclick="changeFlag('Solomon Islands')">Solomon Islands</a>
+                <a href="#" onclick="changeFlag('Somalia')">Somalia</a>
+                <a href="#" onclick="changeFlag('South Africa')">South Africa</a>
+                <a href="#" onclick="changeFlag('South Korea')">South Korea</a>
+                <a href="#" onclick="changeFlag('South Sudan')">South Sudan</a>
+                <a href="#" onclick="changeFlag('Spain')">Spain</a>
+                <a href="#" onclick="changeFlag('Sri Lanka')">Sri Lanka</a>
+                <a href="#" onclick="changeFlag('Sudan')">Sudan</a>
+                <a href="#" onclick="changeFlag('Suriname')">Suriname</a>
+                <a href="#" onclick="changeFlag('Sweden')">Sweden</a>
+                <a href="#" onclick="changeFlag('Switzerland')">Switzerland</a>
+                <a href="#" onclick="changeFlag('Syria')">Syria</a>
+                <a href="#" onclick="changeFlag('Taiwan')">Taiwan</a>
+                <a href="#" onclick="changeFlag('Tajikistan')">Tajikistan</a>
+                <a href="#" onclick="changeFlag('Tanzania')">Tanzania</a>
+                <a href="#" onclick="changeFlag('Thailand')">Thailand</a>
+                <a href="#" onclick="changeFlag('Timor-Leste')">Timor-Leste</a>
+                <a href="#" onclick="changeFlag('Togo')">Togo</a>
+                <a href="#" onclick="changeFlag('Tonga')">Tonga</a>
+                <a href="#" onclick="changeFlag('Trinidad and Tobago')">Trinidad and Tobago</a>
+                <a href="#" onclick="changeFlag('Tunisia')">Tunisia</a>
+                <a href="#" onclick="changeFlag('Turkey')">Turkey</a>
+                <a href="#" onclick="changeFlag('Turkmenistan')">Turkmenistan</a>
+                <a href="#" onclick="changeFlag('Tuvalu')">Tuvalu</a>
+                <a href="#" onclick="changeFlag('Uganda')">Uganda</a>
+                <a href="#" onclick="changeFlag('Ukraine')">Ukraine</a>
+                <a href="#" onclick="changeFlag('United Arab Emirates')">United Arab Emirates</a>
+                <a href="#" onclick="changeFlag('United Kingdom')">United Kingdom</a>
+                <a href="#" onclick="changeFlag('United States')">United States</a>
+                <a href="#" onclick="changeFlag('Uruguay')">Uruguay</a>
+                <a href="#" onclick="changeFlag('Uzbekistan')">Uzbekistan</a>
+                <a href="#" onclick="changeFlag('Vanuatu')">Vanuatu</a>
+                <a href="#" onclick="changeFlag('Vatican City')">Vatican City</a>
+                <a href="#" onclick="changeFlag('Venezuela')">Venezuela</a>
+                <a href="#" onclick="changeFlag('Vietnam')">Vietnam</a>
+                <a href="#" onclick="changeFlag('Western Sahara')">Western Sahara</a>
+                <a href="#" onclick="changeFlag('Yemen')">Yemen</a>
+                <a href="#" onclick="changeFlag('Zambia')">Zambia</a>
+                <a href="#" onclick="changeFlag('Zimbabwe')">Zimbabwe</a>
+            </div>
+    </div>
+</div>
+    <div class="score-display" id="scoreDisplay">
+        <h1>"The secret of freedom lies in educating people, whereas the secret of tyranny is in keeping them ignorant."</h1> 
+        <h3>— Maximilien Robespierre</h2>
+        <h2>This countries freedom score is:</h2>
+        <p id="scoreValue"></p>
+        <h3 id="freedomStatus"></h3>
+    </div>
+    
+    <div class="bottom-right-display" id="bottomRightDisplay" onclick="openHelpPopup(event)">
+        <h1>How can I help?</h1>
+    </div>
+
+    <div class="help-popup" id="helpPopup">
+        <div class="help-content">
+            <span class="close-btn" onclick="closeHelpPopup(event)">&times; Close</span>
+            <h2>How to Get Involved</h2>
+            
+            <h3>Global Resources</h3>
+            <ul>
+                <li><a href="https://www.changemakers.com/en/tools" target="_blank">Changemakers</a></li>
+                <li><a href="https://www.amnesty.org" target="_blank">Amnesty International</a></li>
+                <li><a href="https://www.hrw.org" target="_blank">Human Rights Watch</a></li>
+                <li><a href="https://www.transparency.org" target="_blank">Transparency International</a></li>
+                <li><a href="https://www.globalgiving.org" target="_blank">GlobalGiving</a></li>
+                <li><a href="https://www.idealist.org" target="_blank">Idealist</a></li>
+                <li><a href="https://www.allout.org" target="_blank">AllOut</a></li>
+                <li><a href="https://www.sumofus.org" target="_blank">SumOfUs</a></li>
+            </ul>
+
+            <h3>Union Representation</h3>
+            <ul>
+                <li><a href="https://www.ituc-csi.org" target="_blank">International Trade Union Confederation (ITUC)</a></li>
+                <li><a href="https://www.uniglobalunion.org" target="_blank">UNI Global Union</a></li>
+                <li><a href="https://www.industriall-union.org" target="_blank">IndustriALL Global Union</a></li>
+                <li><a href="https://www.labourstart.org" target="_blank">LabourStart</a></li>
+            </ul>
+
+            <h3>Contacting Local Representatives</h3>
+            <ul>
+                <li><a href="https://www.theyworkforyou.com" target="_blank">They Work For You (UK)</a></li>
+                <li><a href="https://www.openaustralia.org" target="_blank">OpenAustralia (AUS)</a></li>
+                <li><a href="https://europa.eu/youreurope/citizens/index_en.htm" target="_blank">Your Europe (EU)</a></li>
+                <li><a href="https://www.usa.gov/elected-officials" target="_blank">Call Your Government (USA)</a></li>
+            </ul>
+
+            <div id="localResources">
+                <h3>Local Options:</h3>
+                <ul id="localLinks">
+                    <li>Select a country to see resources.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<audio id="backgroundAudio" loop>
+    <source src="background-sound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<footer class="footer">
+    <p>&copy; 2025 Denby Serrao-Arnot. All rights reserved.</p>
+    <div class="mute-toggle" id="muteToggle" onclick="toggleAudio()">🔊</div>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

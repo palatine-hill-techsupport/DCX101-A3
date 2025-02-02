@@ -1,0 +1,473 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('paper-texture.jpg') no-repeat center center;
+    background-size: cover; 
+}
+
+.im-fell-french-canon-regular {
+  font-family: "IM Fell French Canon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-french-canon-regular-italic {
+  font-family: "IM Fell French Canon", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* General Popup Styling */
+.popup, .about-popup, .help-popup {
+    background: url('paper-texture-pop.jpg') no-repeat center center;
+    background-size: cover; 
+    border: none; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body & General Paragraphs: Use IM Fell French Canon */
+body, p, .popup p, .about-popup p, .help-popup p {
+    font-family: "IM Fell French Canon", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic Text */
+em, i, .italic-text {
+    font-family: "IM Fell French Canon", serif;
+    font-style: italic;
+}
+
+/* Titles & Subtitles: Use Quintessential */
+h1, h2, h3, .popup h1, .popup h2, .popup h3, 
+.about-popup h1, .about-popup h2, .about-popup h3, 
+.help-popup h1, .help-popup h2, .help-popup h3, 
+.popup a {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 60%; 
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popup-content a {
+    font-family: "Quintessential", serif;
+    font-size: 22px !important; 
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    display: block;
+}
+
+.popup-content a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    aspect-ratio: 1440 / 1024;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.line-drawing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('back-line.png') no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+    display: block;
+}
+
+.flag {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: none;
+    z-index: 51 !important; 
+    width: 60vw; 
+    max-width: 900px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    border-radius: 8px;
+}
+
+.popup-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+    text-align: left;
+}
+
+.popup a {
+    display: block;
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
+
+.popup .close-btn {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+.popup .close-btn:hover {
+    color: red;
+}
+
+.popup a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em; 
+    color: #000;
+    text-decoration: none;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: "Quintessential", serif;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.about-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.score-display {
+    position: absolute;
+    width: 500px; 
+    max-width: 70%; 
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 4;
+}
+
+.score-display h1 {
+    font-size: 2.1em; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.score-display h2 {
+    font-size: 1em;  
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.score-display h3 {
+    font-size: 1em; 
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+#scoreValue {
+    font-weight: bold;
+    font-size: 5em;
+    margin: 0px;
+}
+
+#freedomStatus {
+    font-size: 1.5em; 
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.bottom-right-display {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 50 !important;
+    height: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bottom-right-display h1:hover {
+    color: darkred;
+}
+
+.help-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 100 !important; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.help-popup .help-content {
+    color: #333;
+    line-height: 1.6;
+}
+
+.help-popup h2 {
+    font-size: 1.5em; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.help-popup h3 {
+    font-size: 1.25em; 
+    margin-top: 20px;
+    color: #444;
+}
+
+.help-popup ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.help-popup ul li {
+    margin-bottom: 10px;
+}
+
+.help-popup ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.help-popup ul li a:hover {
+    color: #0056b3;
+}
+
+.help-popup .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 3em; 
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.help-popup .close:hover {
+    color: #000;
+}
+
+#localResources a {
+    font-family: "Quintessential", serif;
+    font-size: 1em;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    margin-right: 15px; 
+    margin-bottom: 5px; 
+    transition: color 0.3s ease;
+}
+
+#localResources a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+#localResources {
+    margin-top: 15px; 
+    padding-top: 5px; 
+    border-top: 1px solid #000; 
+}
+
+#localResources {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #000;
+}
+
+.about {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; 
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    z-index: 4;
+}
+
+.about p:hover {
+    color: darkred;
+}
+
+.about-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw; 
+    max-width: 800px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.about-content {
+    font-family: "IM Fell French Canon", serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.about-popup h2, .about-popup h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-popup p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about-popup a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-popup a:hover {
+    text-decoration: underline;
+}
+
+.about-popup .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.about-popup .close:hover {
+    color: red;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1em;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.mute-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.mute-toggle:hover {
+    color: red;
+}
+
+
+
+
+
